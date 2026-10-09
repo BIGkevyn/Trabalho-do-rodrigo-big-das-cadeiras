@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1265d8">
+  <meta name="description" content="Big das Cadeiras: encontre cadeiras de rodas, modelos dobráveis e soluções para mobilidade.">
+  <title>Big das Cadeiras | Liberdade para ir mais longe</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#inicio" class="logo">
+      <span class="logo-icon">✳</span>
+      <span>BIG DAS <strong>CADEIRAS</strong></span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#inicio">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Sobre nós</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="themeToggle" class="theme-toggle"
+        aria-label="Ativar modo escuro" title="Alternar tema">
+        <span id="themeIcon">🌙</span>
+      </button>
+      <button class="cart-button" id="cartButton">
+        🛒 <span class="cart-label">Carrinho</span>
+        <span id="cartCount" class="cart-count">0</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <span class="eyebrow">♿ MOBILIDADE COM QUALIDADE</span>
+        <h1>Mais liberdade.<br>Mais vida.<br><span>Mais possibilidades.</span></h1>
+        <p>
+          Encontre a cadeira de rodas ideal para você ou para
+          quem você ama. Conforto, segurança e independência
+          em cada movimento.
+        </p>
+        <div class="hero-buttons">
+          <a href="#produtos" class="btn btn-primary">Ver produtos →</a>
+          <a href="#sobre" class="btn btn-secondary">Conheça a loja</a>
+        </div>
+        <div class="hero-benefits">
+          <span>✓ Qualidade</span>
+          <span>✓ Conforto</span>
+          <span>✓ Atendimento humano</span>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85"
+          alt="Ambiente de cuidados de saúde"
+        >
+        <div class="floating-card">
+          <span class="floating-icon">💙</span>
+          <div>
+            <strong>Seu bem-estar importa</strong>
+            <small>Mobilidade para o seu dia a dia</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <article>
+        <span>♿</span>
+        <div><strong>Mobilidade</strong><p>Mais autonomia no dia a dia</p></div>
+      </article>
+      <article>
+        <span>🛡️</span>
+        <div><strong>Segurança</strong><p>Escolhas com mais confiança</p></div>
+      </article>
+      <article>
+        <span>💙</span>
+        <div><strong>Cuidado</strong><p>Atendimento com atenção</p></div>
+      </article>
+    </section>
+
+    <section class="products-section" id="produtos">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">NOSSA SELEÇÃO</span>
+          <h2>Encontre sua <span>cadeira ideal</span></h2>
+          <p>Modelos pensados para diferentes necessidades.</p>
+        </div>
+        <span class="product-total">4 produtos em destaque</span>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- Os produtos são criados pelo JavaScript -->
+      </div>
+    </section>
+
+    <section class="about-section" id="sobre">
+      <div class="about-symbol">✳</div>
+      <div>
+        <span class="eyebrow">BIG DAS CADEIRAS</span>
+        <h2>Mobilidade é poder viver do seu jeito.</h2>
+        <p>
+          Acreditamos que conforto, acessibilidade e independência
+          fazem a diferença. Queremos ajudar você a encontrar uma
+          solução de mobilidade adequada às suas necessidades.
+        </p>
+        <a href="#contato" class="btn btn-primary">Fale com a gente →</a>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato">
+      <span class="eyebrow">ESTAMOS AQUI PARA AJUDAR</span>
+      <h2>Vamos encontrar a cadeira certa?</h2>
+      <p>Entre em contato para tirar dúvidas sobre nossos produtos.</p>
+      <a class="btn btn-primary" id="contactButton"
+         href="https://wa.me/5500000000000" target="_blank"
+         rel="noopener noreferrer">
+        💬 Conversar pelo WhatsApp
+      </a>
+      <small>Configure o número oficial da loja no arquivo script.js.</small>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#inicio" class="logo">
+      <span class="logo-icon">✳</span>
+      <span>BIG DAS <strong>CADEIRAS</strong></span>
+    </a>
+    <p>Mobilidade, conforto e cuidado. 💙</p>
+    <span>© <span id="year"></span> Big das Cadeiras.</span>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="cartDialog" class="cart-dialog">
+    <div class="dialog-header">
+      <h2>🛒 Seu carrinho</h2>
+      <button id="closeCart" class="close-button" aria-label="Fechar">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total estimado</span>
+        <strong id="cartTotal">R$ 0,00</strong>
+      </div>
+      <button id="checkoutButton" class="btn btn-primary btn-full">
+        Finalizar pelo WhatsApp
+      </button>
+      <button id="clearCart" class="clear-button">Limpar carrinho</button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
